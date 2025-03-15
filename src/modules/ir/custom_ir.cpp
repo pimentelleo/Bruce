@@ -221,6 +221,15 @@ bool txIrFile(FS *fs, String filepath) {
   return true;
 }
 
+String getRemotes(FS *fileSystem) {
+  String filepath;
+  FS *fs = fileSystem; // SD or LittleFS
+  filepath = loopSD(*fs, true, "IR", "/BruceIR");
+}
+
+String executeRemote() {
+  
+}
 
 void otherIRcodes() {
   checkIrTxPin();
