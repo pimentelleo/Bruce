@@ -1,0 +1,18 @@
+{
+  "name": "PlatformIO Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/platformio-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "platformio.platformio-ide"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/.pio,target=/workspace/.pio,type=volume"
+  ],
+  "remoteUser": "vscode"
+}
